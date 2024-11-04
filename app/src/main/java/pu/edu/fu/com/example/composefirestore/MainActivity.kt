@@ -52,8 +52,6 @@ class MainActivity : ComponentActivity() {
 fun Birth(m: Modifier){
     var userName by remember { mutableStateOf("翁塍富")}
     var userWeight by remember { mutableStateOf(3800)}
-
-
     Column {
         TextField(
             value = userName,
@@ -63,9 +61,8 @@ fun Birth(m: Modifier){
             modifier = m,
             label = { Text("姓名") },
             placeholder = { Text("請輸入您的姓名") }
-
-
         )
+
         TextField(
             value = userWeight.toString(),
             onValueChange = { newText ->
@@ -78,6 +75,7 @@ fun Birth(m: Modifier){
             keyboardOptions = KeyboardOptions
                 (keyboardType = KeyboardType.Number)
         )
+
 
         Text("您輸入的姓名是：$userName\n出生體重為：$userWeight 公克")
     }
